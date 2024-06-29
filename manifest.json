@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "ACf GPT Button",
+  "version": "1.0",
+  "description": "Automatically clicks the 'Generate' button in GPT interface.",
+  "permissions": [
+    "activeTab",
+    "webNavigation"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ]
+}
